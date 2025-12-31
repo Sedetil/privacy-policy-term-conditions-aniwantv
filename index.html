@@ -26,7 +26,6 @@
         <div class="tabs">
             <button class="tab-btn active" onclick="switchTab('privacy')" id="btn-privacy">Privacy Policy</button>
             <button class="tab-btn" onclick="switchTab('terms')" id="btn-terms">Terms & Conditions</button>
-            <button class="tab-btn" onclick="switchTab('delete')" id="btn-delete">Delete Account</button>
         </div>
 
         <!-- Privacy Policy Content -->
@@ -137,44 +136,6 @@
             </div>
         </div>
 
-        <!-- Account and Data Deletion -->
-        <div id="delete" class="hidden fade-in">
-            <div class="content-card">
-                <div class="card-header">
-                    <h2 class="card-title">Account & Data Deletion</h2>
-                </div>
-                <div class="text-content">
-                    <p>
-                        AniWanTV allows users to request deletion of their account and associated personal data.
-                    </p>
-        
-                    <p><strong>How to request account deletion:</strong></p>
-                    <ol>
-                        <li>Send an email to: <strong>support@aniwantv.app</strong></li>
-                        <li>Email subject: <strong>Account Deletion Request - AniWanTV</strong></li>
-                        <li>Include your registered email or user ID</li>
-                    </ol>
-        
-                    <p><strong>Data that will be deleted:</strong></p>
-                    <ul>
-                        <li>User account information</li>
-                        <li>Email address / username</li>
-                        <li>Profile data</li>
-                        <li>Favorites and watch history</li>
-                    </ul>
-        
-                    <p><strong>Data that may be retained:</strong></p>
-                    <ul>
-                        <li>Server logs for security and fraud prevention (retained up to 30 days)</li>
-                    </ul>
-        
-                    <p>
-                        Account deletion requests will be processed within <strong>30 days</strong>.
-                    </p>
-                </div>
-            </div>
-        </div>
-
         <div class="disclaimer">
             <p>&copy; 2025 AniWanTV. All rights reserved.</p>
             <p>Last updated: December 31, 2025</p>
@@ -191,10 +152,6 @@
             document.getElementById('btn-privacy').classList.remove('active');
             document.getElementById('btn-terms').classList.remove('active');
 
-            // Delete Account
-            document.getElementById('delete').classList.add('hidden');
-            document.getElementById('btn-delete').classList.remove('active');
-
             // Show selected section
             document.getElementById(tabName).classList.remove('hidden');
 
@@ -206,3 +163,4 @@
 
 
 </html>
+
