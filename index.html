@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniWanTV - Privacy & Terms</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo brand-font">ANIWAN TV</div>
+    </header>
+
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('privacy')" id="btn-privacy">Privacy Policy</button>
+            <button class="tab-btn" onclick="switchTab('terms')" id="btn-terms">Terms & Conditions</button>
+        </div>
+
+        <!-- Privacy Policy Content -->
+        <div id="privacy" class="fade-in">
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">1. Data Collection & Usage</h2>
+                </div>
+                <div class="text-content">
+                    <p>We collect specific data to provide and improve our streaming service:</p>
+                    <ul>
+                        <li><strong>Personal Information:</strong> When you sign in using Google or Facebook, we collect
+                            basic profile information (name, email, profile picture) to create your account.</li>
+                        <li><strong>Device Information:</strong> Model, OS version, and unique device identifiers to
+                            optimize video playback and app performance.</li>
+                        <li><strong>Storage Access:</strong> We request access to your device's storage to download
+                            anime episodes and manage cached video files for offline viewing.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">2. Third-Party Services</h2>
+                </div>
+                <div class="text-content">
+                    <p>We use trusted third-party services that process data according to their own policies:</p>
+                    <ul>
+                        <li><strong>Google AdMob:</strong> To display relevant advertisements. AdMob may use device
+                            identifiers and cookies to personalize ads.</li>
+                        <li><strong>Firebase (Google):</strong>
+                            <ul>
+                                <li><em>Authentication:</em> To manage secure user logins.</li>
+                                <li><em>Analytics & Crashlytics:</em> To analyze app usage trends and monitor stability.
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Facebook Audience Network:</strong> Used for authentication and potentially
+                            advertising.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">3. App Permissions</h2>
+                </div>
+                <div class="text-content">
+                    <p>The app requires the following permissions to function correctly:</p>
+                    <ul>
+                        <li><strong>Internet:</strong> To stream video content and load data.</li>
+                        <li><strong>Storage (Read/Write):</strong> To save downloaded episodes and cache images/videos.
+                        </li>
+                        <li><strong>Install Packages:</strong> Used for in-app updates (if applicable).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terms & Conditions Content -->
+        <div id="terms" class="hidden fade-in">
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">1. Content & Copyright</h2>
+                </div>
+                <div class="text-content">
+                    <p><strong>AniWanTV is a content aggregator.</strong> We do not host, upload, or manage any video
+                        files on our servers.</p>
+                    <p>All content is scraped from third-party sources. We act as a search engine/browser for publicly
+                        available anime content. If you believe your copyright is being infringed, please contact the
+                        original source file host.</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">2. User Conduct</h2>
+                </div>
+                <div class="text-content">
+                    <p>By using AniWanTV, you agree NOT to:</p>
+                    <ul>
+                        <li>Use the app for any illegal purposes.</li>
+                        <li>Attempt to bypass or hack any app features or security measures.</li>
+                        <li>Harass other users in comments or community features.</li>
+                    </ul>
+                    <p>We reserve the right to ban users who violate these rules.</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">3. Ads & Monetization</h2>
+                </div>
+                <div class="text-content">
+                    <p>This app is supported by advertisements (Google AdMob). By using the app, you agree to see
+                        occasional banner or interstitial ads. These help cover our server and maintenance costs.</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <div class="card-header">
+                    <h2 class="card-title">4. Changes to Terms</h2>
+                </div>
+                <div class="text-content">
+                    <p>We may update these terms at any time. Continued use of the app after changes constitutes
+                        acceptance of the new terms.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p>&copy; 2025 AniWanTV. All rights reserved.</p>
+            <p>Last updated: December 31, 2025</p>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all sections
+            document.getElementById('privacy').classList.add('hidden');
+            document.getElementById('terms').classList.add('hidden');
+
+            // Remove active class from buttons
+            document.getElementById('btn-privacy').classList.remove('active');
+            document.getElementById('btn-terms').classList.remove('active');
+
+            // Show selected section
+            document.getElementById(tabName).classList.remove('hidden');
+
+            // Add active class to selected button
+            document.getElementById('btn-' + tabName).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

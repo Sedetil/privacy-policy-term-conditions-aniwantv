@@ -1,0 +1,152 @@
+:root {
+    --primary: #E50914; /* Netflix Red */
+    --bg: #141414; /* Dark Background */
+    --surface: #1F1F1F; /* Card Surface */
+    --text-main: #FFFFFF;
+    --text-muted: #B3B3B3;
+    --border-width: 2px;
+    --shadow-offset: 4px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+h1, h2, h3, .brand-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Container */
+.container {
+    max-width: 600px; /* Mobile focused */
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Header */
+header {
+    background-color: var(--bg);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: var(--border-width) solid var(--primary);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--primary);
+    text-shadow: 2px 2px 0px #fff;
+    letter-spacing: 1px;
+}
+
+/* Tab Switcher */
+.tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    background: var(--surface);
+    padding: 8px;
+    border: var(--border-width) solid var(--text-main);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--primary);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.tab-btn.active {
+    background-color: var(--primary);
+    color: var(--text-main);
+    border: 2px solid var(--text-main);
+    box-shadow: 2px 2px 0px #000;
+    transform: translate(-1px, -1px);
+}
+
+/* Cards */
+.content-card {
+    background-color: var(--surface);
+    border: var(--border-width) solid var(--text-main);
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--primary);
+    position: relative;
+}
+
+.card-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-title {
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.text-content p {
+    margin-bottom: 16px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.text-content ul {
+    margin-bottom: 16px;
+    padding-left: 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.text-content li {
+    margin-bottom: 8px;
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Disclaimer */
+.disclaimer {
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-muted);
+    opacity: 0.6;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
